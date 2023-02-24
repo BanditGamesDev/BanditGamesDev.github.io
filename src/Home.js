@@ -1,17 +1,18 @@
 import React from 'react'
 
 export default function Home() {
-  return (
-    <div>
-        <head>
-            <title>DEV | Bandit Game Studio</title>
-        </head>
+  return <h1>Home</h1>
+  // return (
+  //   <div>
+  //       <head>
+  //           <title>HOME PAGE</title>
+  //       </head>
 
-    <body>
-        <div id = "hi"></div>
-        <h1> hi</h1>
-        <script src="App.js"></script>
-    </body>
-    </div>
-  )
+  //   <body>
+  //       <div id = "hi"></div>
+  //       <h1> body</h1>
+  //       <script src="App.js"></script>
+  //   </body>
+  //   </div>
+  // )
 }
