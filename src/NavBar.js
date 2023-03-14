@@ -1,20 +1,42 @@
-import React from 'react'
-import "./Style/NavBar.css"
+import React, { useState, useEffect } from 'react';
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import logo from './Graphics/Bandit-Text-Logo.png'
+import "./Style/NavBar.css"
 
 export default function NavBar() {
-  return <nav className = "nav">
-    <Link to = "/" className = "site-title">
-      Bandit Game Studio
-    </Link>
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect (() => {
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      if (position > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
+      <Link to = "/" className = "site-title">
+        <img src = { logo } className = "logo" alt = 'logo' />
+      </Link>
     <ul>
-      <CustomLink to = "/AboutUs">AboutUs</CustomLink>
-      <CustomLink to = "/TheDen">TheDen</CustomLink>
+      <CustomLink to = "/AboutUs">About Us</CustomLink>
+      <CustomLink to = "/TheDen">The Den</CustomLink>
       <CustomLink to = "/News">News</CustomLink>
       <CustomLink to = "/Projects">Projects</CustomLink>
-      <CustomLink to = "/ContactUs">ContactUs</CustomLink>
+      <CustomLink to = "/ContactUs">Contact Us</CustomLink>
     </ul>
-  </nav>
+    </nav>
+  );
 }
 
 function CustomLink({ to, children, ...props}) {

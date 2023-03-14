@@ -3,22 +3,40 @@
 }
 
 body {
+  background-color: #000000;
   margin: 0;
-  font-family: Public-Sans, sans-serif; /* Add font family */
+  font-family: Cairo, Public-Sans, sans-serif;
 }
 
 .nav {
-  background-color: #333;
-  color: #FFFFFF;
+  color: #FFFF;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
-  padding: 0 1rem;
+  padding: 0 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logo {
+  width: 9.375rem;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.nav.scrolled {
+  background-color: #000000;
 }
 
 .site-title {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .nav ul {
