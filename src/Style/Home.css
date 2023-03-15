@@ -1,10 +1,7 @@
 body {
     margin: 0;
     font-family: Cairo, Public-Sans, sans-serif;
-    background-image: url("/src/Graphics/background-image.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg, rgba(32, 30, 31, 0.5) 0%, rgba(32, 30, 31, 0.25) 26.04%, rgba(32, 30, 31, 0) 51.04%, rgba(32, 30, 31, 0.25) 77.6%, rgba(32, 30, 31, 0.5) 100%), url("/src/Graphics/background-image.png") center/cover no-repeat;
     height: 100vh;
   }
   

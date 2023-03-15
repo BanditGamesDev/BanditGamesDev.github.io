@@ -21,9 +21,13 @@ body {
   width: 100%;
   z-index: 1;
   transition: background-color 0.3s ease-in-out;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
 .logo {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   width: 9.375rem;
 }
 
@@ -56,10 +60,25 @@ body {
   padding: .25rem;
 }
 
-.nav li:active {
-  background-color: #555;
+.nav li {
+  position: relative;
 }
 
-.nav li:hover {
-  background-color: #777;
+.nav li:after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 0.2rem;
+  background-color: #db5f44;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.nav li:hover:after {
+  width: 100%;
+  opacity: 1;
 }
