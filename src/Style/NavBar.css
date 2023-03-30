@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -9,7 +9,7 @@ body {
 }
 
 .nav {
-  color: #FFFF;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -57,7 +57,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 .nav li {
@@ -81,4 +81,4 @@ body {
 .nav li:hover:after {
   width: 100%;
   opacity: 1;
-}
+}/*# sourceMappingURL=NavBar.css.map */
