@@ -1,8 +1,11 @@
-import React from 'react'
-import "./Style/Home.module.css"
+import React from 'react';
+import './Style/Home.css';
 
 export default function Home() {
   return (
-    <h1> </h1>
+    <div className="title-container">
+      <h1>DEV HARD, PLAY HARD</h1>
+      <p>LIFE IS JUST A BIG GAME, SO LET'S DESIGN IT TOGETHER</p>
+    </div>
   );
 }
