@@ -27,7 +27,7 @@ body {
 }
 
 body.gradient{
-  background: url(Red\ Gradient\ Bkg.png) no-repeat center center fixed;
+  background: url(Red\ Gradient\ Bkg.png) repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -70,7 +70,7 @@ body.gradient{
     text-align: center;
     padding: 10px 15px 10px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 2vw;
   }
   
   li.navBar-dropdown .dropbtn, li.navBar-dropdown2 .dropbtn {
@@ -85,7 +85,12 @@ body.gradient{
     background-color: #e8a507;
   }
 
-  
+  .brand{
+    left:3%; 
+    position: relative;
+    height: 8vh;
+  }
+
   .navBar-dropdown-content{
     display: none;
     border: none;
@@ -121,7 +126,8 @@ body.gradient{
   
   .navbar-light{
       padding: 1% 1% 1%;
-      font-size: 60px;
+      width: auto;
+      height: 15%;
       border-radius: 40px;
       background-color: #5b0009ce;
   }
@@ -205,6 +211,11 @@ body.gradient{
     }
   } 
   
+  .bandit-logo{
+    width: 100%; 
+    height: auto; 
+    float: left;
+  }
   
   
   table, th, td {
@@ -228,11 +239,30 @@ body.gradient{
   .two
   {
     padding: 5% 1%;
-    margin-left: 20px;
+    margin-left: 3.3%;
     display: block;
-    height: 70%;
     width:45%;
+    height: 75%;
     float: left;
+  }
+
+
+  @media screen and (max-width:800px){
+    .two{
+      width: 100%;
+    }
+    .dropbtn{
+      font-size: 5vw;
+    }
+    .brand{
+      margin-left: 10%;
+      content: url("Bandit-Full\ Text\ White.png");
+    }
+    .bandit-logo{
+      width: 50%;
+      margin-left: 20%;
+    }
+
   }
   .three
   {
